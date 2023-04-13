@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { deletePost } from "@/features/PostSlice";
+import { useAppSelector } from "@/store/hooks";
 
 import {
   UserCircleIcon,
@@ -29,9 +30,12 @@ interface User {
 }
 
 const Post = ({ title, body, reactions, tags, userId, postId, img }: Data) => {
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState<User>({
+    username: "",
+    image: "",
+  });
   const [like, setLike] = useState(false);
-  const feed = useSelector((state) => state.post.value);
+  const feed = useAppSelector((state) => state.post.value);
   const dispatch = useDispatch();
 
   const fetchUser = async () => {

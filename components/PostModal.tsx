@@ -7,7 +7,6 @@ import { XMarkIcon, UserIcon } from "@heroicons/react/24/outline";
 import {
   UsersIcon,
   ChevronDownIcon,
-  PhoneIcon,
   PhotoIcon,
 } from "@heroicons/react/24/solid";
 import toast from "react-hot-toast";
@@ -31,8 +30,7 @@ function PostModal({}) {
       },
     });
 
-  const handlePost = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const handlePost = async () => {
     setContentInInput("");
     dispatch(setModal());
     dispatch(

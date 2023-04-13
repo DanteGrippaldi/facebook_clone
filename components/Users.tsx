@@ -2,15 +2,29 @@ import React, { useState, useEffect } from "react";
 
 import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
 import UserCard from "./UserCard";
+
+interface User {
+  firstName: string;
+  lastName: string;
+  image: string;
+}
+
+type Users = User[];
+
 const Users = () => {
-  const [users, setUsers] = useState({});
-  const fakeList = [1, 2, 3, 4, 5, 6, 7, 8];
+  const [users, setUsers] = useState<Users>([
+    {
+      firstName: "",
+      lastName: "",
+      image: "",
+    },
+  ]);
 
   const fetchUsers = async () => {
     const url = "https://dummyjson.com/users";
     const response = await fetch(url);
     const responseJson = await response.json();
-    setUsers(responseJson);
+    setUsers(responseJson.users);
   };
 
   useEffect(() => {
@@ -26,7 +40,7 @@ const Users = () => {
 
       {/* users */}
       <div className="space-y-2 pt-2">
-        {users?.users?.map((user: any, i: number) => (
+        {users?.map((user: User, i: number) => (
           <UserCard
             key={i}
             firstName={user.firstName}
