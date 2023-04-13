@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useAppSelector } from "@/store/hooks";
 import { addPost } from "@/features/PostSlice";
 import { setModal } from "@/features/ModalSlice";
 import { XMarkIcon, UserIcon } from "@heroicons/react/24/outline";
@@ -14,7 +15,7 @@ import toast from "react-hot-toast";
 function PostModal({}) {
   const dispatch = useDispatch();
   const lastId =
-    useSelector(
+    useAppSelector(
       (state) => state.post.value[state.post.value?.length - 1]?.id
     ) ?? 0;
   const [contentInInput, setContentInInput] = useState<string>("");
