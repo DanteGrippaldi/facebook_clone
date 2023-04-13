@@ -20,6 +20,12 @@ To run this application locally, follow these steps:
 
 This is an ongoing project I will be using for my portolio. I am aware there may be a few bugs here and there. I have decided to deploy this application anyways so that potential employers can have a reference to my work :). Enjoy!
 
+## Live Demo
+
+This site is hosted with Netlify's free plan -- please allow at least 30 seconds for all the data to load correctly due to the free plan :).
+
+Live demo: [`Facebook Clone`](https://effervescent-creponne-402ec4.netlify.app/)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
