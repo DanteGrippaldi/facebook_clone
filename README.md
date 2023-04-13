@@ -1,3 +1,25 @@
+# Facebook Clone Application
+
+## Technologies Used
+
+* Next.js
+* TypeScript
+* TailwindCSS
+* Redux
+
+## Data source
+I built this application pulling data from the following API: https://dummyjson.com/
+
+## Installation 
+To run this application locally, follow these steps: 
+1. Clone the repository: https://github.com/DanteGrippaldi/facebook_clone.git
+2. Install dependancies: 'npm install'
+3. Start the development server: 'npm run dev'
+
+### PLEASE NOTE
+
+This is an ongoing project I will be using for my portolio. I am aware there may be a few bugs here and there. I have decided to deploy this application anyways so that potential employers can have a reference to my work :). Enjoy!
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
