@@ -52,7 +52,7 @@ const Header = () => {
       </div>
 
       {/* right */}
-      <div className="flex items-center space-x-5 pr-5">
+      <div className="hidden lg:inline-flex items-center space-x-5 pr-5">
         <div className="md:hidden bg-gray-200 p-2 rounded-full cursor-pointer hover:bg-gray-300">
           <PlusIcon className="h-6 w-6" />
         </div>
