@@ -33,7 +33,7 @@ const Feed = () => {
   return (
     <div className="lg:p-5 py-5 flex flex-col items-center bg-gray-100 overflow-x-hidden">
       {/* post bar */}
-      <div className="md:w-[600px] w-full h-[150px] bg-white rounded-xl shadow-md p-2">
+      <div className="max-w-[95%] md:w-[600px] w-full h-[150px] bg-white rounded-xl shadow-md p-2">
         {/* input */}
         <div className="flex items-center p-2 space-x-2 border-b-2">
           <div className="w-12 h-12 rounded-full">
@@ -56,7 +56,7 @@ const Feed = () => {
             className="flex items-center space-x-2 cursor-pointer hover:bg-gray-100 px-3 py-1 rounded-xl"
           >
             <VideoCameraIcon className="h-5 w-5 lg:h-8 lg:w-8 text-red-400" />
-            <p className="text-gray-500 font-semibold text-sm lg:text-lg">
+            <p className="hidden sm:inline-flex text-gray-500 font-semibold text-xs md:text-sm lg:text-lg">
               Live video
             </p>
           </div>
@@ -66,7 +66,7 @@ const Feed = () => {
             className="flex items-center space-x-2 cursor-pointer hover:bg-gray-100 px-3 py-1 rounded-xl"
           >
             <PhotoIcon className="h-5 w-5 lg:h-8 lg:w-8 text-green-400" />
-            <p className="text-gray-500 font-semibold text-sm lg:text-lg">
+            <p className="hidden sm:inline-flex text-gray-500 font-semibold text-xs md:text-sm lg:text-lg">
               Photo/Video
             </p>
           </div>
@@ -76,7 +76,7 @@ const Feed = () => {
             className="flex items-center space-x-2 cursor-pointer hover:bg-gray-100 px-3 py-1 rounded-xl"
           >
             <FaceSmileIcon className="h-5 w-5 lg:h-8 lg:w-8 text-yellow-400" />
-            <p className="text-gray-500 font-semibold text-sm lg:text-lg">
+            <p className="hidden sm:inline-flex text-gray-500 font-semibold text-xs md:text-sm lg:text-lg">
               Feeling/Activity
             </p>
           </div>
@@ -92,7 +92,7 @@ const Feed = () => {
       </div>
 
       {/* posts */}
-      <div className="py-5">
+      <div className="py-5 mx-auto p-2">
         {feed?.map((post, i) => (
           <div key={i} className="py-2">
             <Post

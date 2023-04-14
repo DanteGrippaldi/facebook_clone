@@ -48,8 +48,9 @@ const Post = ({ title, body, reactions, tags, userId, postId, img }: Data) => {
   useEffect(() => {
     fetchUser();
   }, [feed]);
+
   return (
-    <div className="md:w-[600px] w-full h-[600px] bg-white rounded-xl shadow-md p-5">
+    <div className=" md:w-[600px] w-full h-[600px] bg-white rounded-xl shadow-md p-5">
       {/* top section */}
       <div className="w-full h-10 flex justify-between items-center">
         {/* left */}
@@ -112,7 +113,7 @@ const Post = ({ title, body, reactions, tags, userId, postId, img }: Data) => {
         {/* like */}
         <div
           onClick={() => setLike(!like)}
-          className="flex space-x-2 items-center hover:bg-gray-100 cursor-pointer px-10 py-2 rounded-xl"
+          className="flex space-x-2 items-center hover:bg-gray-100 cursor-pointer md:px-10 py-2 rounded-xl"
         >
           <HandThumbUpIcon
             className={`h-7 w-7 ${like ? "text-blue-400" : "text-gray-400"}`}
@@ -121,13 +122,13 @@ const Post = ({ title, body, reactions, tags, userId, postId, img }: Data) => {
         </div>
 
         {/* comment */}
-        <div className="flex space-x-2 items-center hover:bg-gray-100 cursor-pointer px-10 py-2 rounded-xl">
+        <div className="flex space-x-2 items-center hover:bg-gray-100 cursor-pointer md:px-10 py-2 rounded-xl">
           <ChatBubbleLeftIcon className="h-7 w-7 text-gray-400" />
           <p className="text-gray-400">Comment</p>
         </div>
 
         {/* share */}
-        <div className="flex space-x-2 items-center hover:bg-gray-100 cursor-pointer px-10 py-2 rounded-xl">
+        <div className="flex space-x-2 items-center hover:bg-gray-100 cursor-pointer md:px-10 py-2 rounded-xl">
           <ShareIcon className="h-7 w-7 text-gray-400" />
           <p className="text-gray-400">Share</p>
         </div>
